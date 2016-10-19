@@ -9,6 +9,9 @@ ul {
   margin: 0;
   padding: 0;
 }
+.padd0 {
+  padding: 0;
+}
 /*----前端head  start----*/
 .font-head {
   padding: 15px 0;
@@ -42,7 +45,7 @@ ul {
   margin: 35px 0;
 }
 .column-hr {
-  border-top: 1px  dashed #BCE8F1;
+  border-top: 1px  dashed #900c0c;
 }
 .column-name {
   position: absolute;
@@ -51,7 +54,7 @@ ul {
   transform: translate(-50%, -50%);
   display: block;
   padding: 5px 35px;
-  border: 1px dashed #BCE8F1;
+  border: 1px dashed #900c0c;
   background: #fff;
   border-radius: 4px;
 }
@@ -82,13 +85,13 @@ ul {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  color: #286090;
+  color: #900c0c;
 }
 .font-cont-auther {
   padding-bottom: 5px;
   font-size: 12px;
   color: #ccc;
-  border-bottom: 1px dashed #ccc;
+  border-bottom: 1px dashed #900c0c;
 }
 .font-cont-auther time {
   padding-left: 20px;
@@ -97,7 +100,6 @@ ul {
   margin-top: 5px;
 }
 .font-knowledge {
-  margin-left: 20px;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2), -1px -1px 2px rgba(0, 0, 0, 0.1);
 }
 .font-knowledge-panel {
@@ -119,7 +121,7 @@ ul {
   text-overflow: ellipsis;
   white-space: nowrap;
   line-height: 28px;
-  border-bottom: 1px dashed #ccc;
+  border-bottom: 1px dashed #900c0c;
 }
 .knowledge-class li a {
   color: #333;
