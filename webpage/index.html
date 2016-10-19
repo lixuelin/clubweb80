@@ -7,6 +7,7 @@
 		<link rel="stylesheet" href="../js/bootstrap/css/bootstrap.min.css" />
 		<link rel="stylesheet" href="../css/index.css" />
 		<script src="../js/jquery/jquery-1.11.0.js"></script>
+		<script src="../js/jquery/jquery.cookie.js"></script>
 		<script src="../js/bootstrap/js/bootstrap.min.js"></script>
 	</head>
 	<body>
@@ -21,12 +22,12 @@
 			<nav class="font-nav">
 				<div class="container-fluid">
 					<div class="col-lg-10 col-lg-offset-1">
-						<ul class="nav nav-pills nav-justified" role="tablist">
-							<li role="presentation" class="active"><a href="#">首页</a></li>
-							<li role="presentation"><a href="../webpage/web/notes.html">前端知识</a></li>
-							<li role="presentation"><a href="../webpage/cases/cases.html">前端案例</a></li>
-							<li role="presentation"><a href="../webpage/for_me/forMe.html">关于我</a></li>
-							<li role="presentation"><a href="../webpage/for_me/contact.html">联系我</a></li>
+						<ul id="nav" class="nav nav-pills nav-justified" role="tablist">
+							<li data-name = "home" class="active"><a href="#">首页</a></li>
+							<li data-name = "knowledge"><a href="../webpage/web/notes.html">前端知识</a></li>
+							<li data-name = "cases"><a href="../webpage/cases/cases.html">前端案例</a></li>
+							<li data-name = "about"><a href="../webpage/for_me/forMe.html">关于我</a></li>
+							<li data-name = "contact"><a href="../webpage/for_me/contact.html">联系我</a></li>
 						</ul>
 					</div>
 				</div>
@@ -340,6 +341,6 @@
 				</div>
 			</address>
 		</footer>
-		<script src="../js/index.js"></script>
+		<script src="../js/jquery/index.js"></script>
 	</body>
 </html>
