@@ -3,27 +3,6 @@
 .main {
   margin: 15px 0;
 }
-.notes-class {
-  margin-top: 20px;
-  line-height: 24px;
-  overflow: hidden;
-}
-.notes-class li {
-  float: left;
-  margin-right: 10px;
-  padding: 3px 15px;
-  border: 1px dashed #BCE8F1;
-  border-radius: 4px;
-}
-.notes-class li:not(:first-child):hover {
-  background: #1B6D85;
-}
-.notes-class li:not(:first-child):hover a {
-  color: #fff;
-}
-.notes-class li:first-child {
-  border: none;
-}
 .notes-cont-head h1 {
   font-size: 26px;
   text-align: center;

@@ -1,6 +1,6 @@
 @charset "utf-8";
 body {
-  background: #F8F8F8;
+  background: url(../img/bg.gif) repeat;
 }
 li {
   list-style: none;
@@ -16,13 +16,13 @@ ul {
 .font-logo {
   width: 80px;
   height: 80px;
-  background: url(../img/b7.jpg) no-repeat;
+  background: url(../img/me.jpg) no-repeat;
   background-size: 100% 100%;
   border-radius: 50% ;
   transition: all ease-in-out 0.8s;
 }
 .font-logo:hover {
-  border-radius: 0;
+  border-radius: 10px;
 }
 .font-nav {
   background: #101010;
@@ -125,7 +125,7 @@ ul {
   color: #333;
 }
 .knowledge-class li a:hover {
-  color: #286090;
+  color: #900c0c;
   text-decoration: none;
 }
 .font-case {
@@ -136,6 +136,31 @@ ul {
   display: none;
 }
 /*----前端知识 end----*/
+/*-----分类 start-----*/
+.notes-class {
+  margin-top: 20px;
+  line-height: 24px;
+  overflow: hidden;
+}
+.notes-class li {
+  float: left;
+  margin-right: 10px;
+  padding: 3px 15px;
+  background: #fff;
+  border: 1px dashed #BCE8F1;
+  border-radius: 4px;
+}
+.notes-class li:not(:first-child):hover {
+  background: #1B6D85;
+}
+.notes-class li:not(:first-child):hover a {
+  color: #fff;
+}
+.notes-class li:first-child {
+  background: none;
+  border: none;
+}
+/*-----分类 end-----*/
 /*-----前端底部 start----*/
 .font-footer {
   padding: 20px;
