@@ -50,6 +50,7 @@
   border: 1px solid #ccc;
   color: #333;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2), -1px -1px 2px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
 }
 .font-works-time {
   color: #666;
