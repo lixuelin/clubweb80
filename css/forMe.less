@@ -1,1 +1,83 @@
 @charset "utf-8";
+
+.font-works-direction(){
+    position: absolute;
+    top: 4px;
+    z-index: 9;
+    background: #fff;
+    content: "";
+    width: 12px;
+    height: 12px;
+    border: 1px solid #900c0c;
+    border-radius: 50%;
+}
+
+.font-works-list{
+    position: relative;
+    overflow: hidden;
+    margin: 20px auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    &::before{
+        position: absolute;
+        left: 50%;
+        top: 0;content: "";
+        height: 100%;
+        width: 2px;
+        background: #900c0c none repeat scroll 0 0;
+        
+    }
+    &-left{
+        &::before{
+            left: 0-5px;
+            .font-works-direction()
+        }
+    }
+    &-right{
+        text-align: right;
+        &::before{
+            right: 0-7px;
+            .font-works-direction()
+        }
+    }
+}
+.font-works{
+    position: relative;
+    padding: 10px;
+    background: #fff;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    color: #333;
+    &-time{
+        color: #666;
+    }
+    &-name{
+        color: #900c0c;
+    }
+    &-cont{
+        color: #666;
+        text-indent: 2em;
+        text-align:justify;
+    }
+}
+.font-works-left{
+    &::before{
+        position: absolute;
+        left: 20px;
+        top: 4px;
+        background: #fff;
+        content: "";
+        width: 12px;
+        height: 12px;
+        border: 1px solid #900c0c;
+        border-radius: 50%;
+    }
+}
+
+.font-works-contact{
+    & img{
+        display: block;
+        width: 100px;
+        height: 100px;
+    }
+}
