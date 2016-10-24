@@ -1,0 +1,46 @@
+{
+	"works": [
+		{
+			"time": "2014年8月-至今",
+			"company": "神州泰岳智能数据技术有限公司",
+			"work": "Web应用的设计与开发；Javascript数据处理；复杂Ajax交互开发；Web接口设计与开发；Html/css代码质量控制。"
+		},
+		{
+			"time": "2013年6月-2014年8月",
+			"company": "神州泰岳智能数据技术有限公司",
+			"work": "Web应用的设计与开发；Javascript数据处理；复杂Ajax交互开发；Web接口设计与开发；Html/css代码质量控制。"
+		},
+		{
+			"time": "longlong ago",
+			"company": "神州泰岳智能数据技术有限公司",
+			"work": "Web应用的设计与开发；Javascript数据处理；复杂Ajax交互开发；Web接口设计与开发；Html/css代码质量控制。"
+		}
+	],
+	"skill":[
+		{
+			"imgUrl":"css.png",
+			"name":"javascript",
+			"how":"熟练"
+		},
+		{
+			"imgUrl":"css.png",
+			"name":"angular",
+			"how":"熟练"
+		},
+		{
+			"imgUrl":"css.png",
+			"name":"html/css",
+			"how":"熟练"
+		},
+		{
+			"imgUrl":"css.png",
+			"name":"ps/axure",
+			"how":"熟练"
+		},
+		{
+			"imgUrl":"css.png",
+			"name":"node",
+			"how":"熟练"
+		}
+	]
+} 
