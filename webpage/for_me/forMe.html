@@ -120,7 +120,7 @@
 					<ul class="container-fluid padd0" data-ng-controller="skill">
 						<li class="col-lg-2" data-ng-repeat="s in skills">
 							<div class="thumbnail font-case">
-								<img src="../../img/{{s.imgUrl}}" alt="css">
+								<img data-ng-src="../../img/{{s.imgUrl}}" alt="css">
 								<div class="caption">
 									<h4 data-ng-bind="s.name"></h4>
 									<p data-ng-bind="s.how"></p>
