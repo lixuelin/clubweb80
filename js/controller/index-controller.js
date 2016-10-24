@@ -8,10 +8,9 @@ app.controller('knowledge', function($scope, $http) {
 
 app.controller('knowledgeList', function($scope, $http) { //推荐知识列表
 	$http.get('Json/knowledge.json').success(function(respone) {
-		$scope.knowledgeLists = respone.knowledgeLists;
+		$scope.knowledgeLists = respone.knowledges;
 	})
 })
-
 
 /*---- controller knowledge end----*/
 
@@ -32,7 +31,7 @@ app.controller('book', function($scope, $http) {
 
 app.controller('booksList', function($scope, $http) {//推荐书籍列表
 	$http.get('Json/books.json').success(function(respone) {
-		$scope.booksLists = respone.booksLists;
+		$scope.booksLists = respone.books;
 	})
 })
 /*---- controller books end----*/

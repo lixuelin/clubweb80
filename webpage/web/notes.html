@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html data-ng-app= "myweb">
 	<head>
 		<meta charset="UTF-8">
 		<title>clubweb80 - 前端知识</title>
@@ -9,6 +9,9 @@
 		<script src="../../js/jquery/jquery-1.11.0.js"></script>
 		<script src="../../js/jquery/jquery.cookie.js"></script>
 		<script src="../../js/bootstrap/js/bootstrap.min.js"></script>
+		<!--angular start-->
+		<script src="../../js/angular/angular_1.4.6.min.js" ></script>
+		<!--angular end-->
 	</head>
 	<body>
 		<header>
@@ -68,98 +71,26 @@
 					</div>
 					<div class="">
 						<div class="col-lg-9">
-							<div class="font-notes">
-							<div class="font-box mt20">
-								<div class="font-img  pull-left"><img src="../../img/knowledgeImg/b7.jpg" /></div>
-								<div class="font-cont">
-									<div class="font-cont-head mt10">
-										<h4 class="font-cont-head-title">IE兼容型运动框架</h4>
-										<div class="font-cont-auther">
-											<span>作者：李学麟</span>
-											<time>日期：2016-09-19</time>
+							<ul class="font-notes" data-ng-controller="knowledge">
+								<li class="font-box mt20"  data-ng-repeat="k in knowledges" ng-show="k.push">
+									<div class="font-img  pull-left"><img data-ng-src="../../img/{{k.imgUrl}}" /></div>
+									<div class="font-cont">
+										<div class="font-cont-head mt10">
+											<a data-ng-href="{{k.link}}" target="_blank"><h4 class="font-cont-head-title" data-ng-bind="k.title"></h4></a>
+											<div class="font-cont-auther">
+												<span>作者：<span data-ng-bind="k.author"></span></span>
+												<time>日期：<span data-ng-bind="k.author"></span></time>
+											</div>
+										</div>
+										<div class="font-cont-bewrite">
+											<p data-ng-bind="k.cont"></p>
+										</div>
+										<div class="font-foot text-right">
+											<a class="btn btn-primary btn-xs" data-ng-href="{{k.link}}">阅读全文</a>
 										</div>
 									</div>
-									<div class="font-cont-bewrite">
-										<p>继WeUI，腾讯朋友又出一款UI组件库sheral。简单来说，sheral是个UI库，目前拥有25+常用移动端组件（如btn, card, media, nav, dialog, toast等），同时允许用户非常方便扩展及定制属于自己的组件。但是sheral决不只限于UI库......</p>
-									</div>
-									<div class="font-foot text-right">
-										<a class="btn btn-primary btn-xs" href="../web/knowledge/notesDetail.html">阅读全文</a>
-									</div>
-								</div>
-							</div>
-							<div class="font-box mt20">
-								<div class="font-img  pull-left"><img src="../../img/knowledgeImg/b7.jpg" /></div>
-								<div class="font-cont">
-									<div class="font-cont-head mt10">
-										<h4 class="font-cont-head-title">IE兼容型运动框架</h4>
-										<div class="font-cont-auther">
-											<span>作者：李学麟</span>
-											<time>日期：2016-09-19</time>
-										</div>
-									</div>
-									<div class="font-cont-bewrite">
-										<p>继WeUI，腾讯朋友又出一款UI组件库sheral。简单来说，sheral是个UI库，目前拥有25+常用移动端组件（如btn, card, media, nav, dialog, toast等），同时允许用户非常方便扩展及定制属于自己的组件。但是sheral决不只限于UI库......</p>
-									</div>
-									<div class="font-foot text-right">
-										<a class="btn btn-primary btn-xs" href="../web/knowledge/notesDetail.html">阅读全文</a>
-									</div>
-								</div>
-							</div>
-							<div class="font-box mt20">
-								<div class="font-img  pull-left"><img src="../../img/knowledgeImg/b7.jpg" /></div>
-								<div class="font-cont">
-									<div class="font-cont-head mt10">
-										<h4 class="font-cont-head-title">IE兼容型运动框架</h4>
-										<div class="font-cont-auther">
-											<span>作者：李学麟</span>
-											<time>日期：2016-09-19</time>
-										</div>
-									</div>
-									<div class="font-cont-bewrite">
-										<p>继WeUI，腾讯朋友又出一款UI组件库sheral。简单来说，sheral是个UI库，目前拥有25+常用移动端组件（如btn, card, media, nav, dialog, toast等），同时允许用户非常方便扩展及定制属于自己的组件。但是sheral决不只限于UI库......</p>
-									</div>
-									<div class="font-foot text-right">
-										<a class="btn btn-primary btn-xs" href="../web/knowledge/notesDetail.html">阅读全文</a>
-									</div>
-								</div>
-							</div>
-							<div class="font-box mt20">
-								<div class="font-img  pull-left"><img src="../../img/knowledgeImg/b7.jpg" /></div>
-								<div class="font-cont">
-									<div class="font-cont-head mt10">
-										<h4 class="font-cont-head-title">IE兼容型运动框架</h4>
-										<div class="font-cont-auther">
-											<span>作者：李学麟</span>
-											<time>日期：2016-09-19</time>
-										</div>
-									</div>
-									<div class="font-cont-bewrite">
-										<p>继WeUI，腾讯朋友又出一款UI组件库sheral。简单来说，sheral是个UI库，目前拥有25+常用移动端组件（如btn, card, media, nav, dialog, toast等），同时允许用户非常方便扩展及定制属于自己的组件。但是sheral决不只限于UI库......</p>
-									</div>
-									<div class="font-foot text-right">
-										<a class="btn btn-primary btn-xs" href="../web/knowledge/notesDetail.html">阅读全文</a>
-									</div>
-								</div>
-							</div>
-							<div class="font-box mt20">
-								<div class="font-img  pull-left"><img src="../../img/knowledgeImg/b7.jpg" /></div>
-								<div class="font-cont">
-									<div class="font-cont-head mt10">
-										<h4 class="font-cont-head-title">IE兼容型运动框架</h4>
-										<div class="font-cont-auther">
-											<span>作者：李学麟</span>
-											<time>日期：2016-09-19</time>
-										</div>
-									</div>
-									<div class="font-cont-bewrite">
-										<p>继WeUI，腾讯朋友又出一款UI组件库sheral。简单来说，sheral是个UI库，目前拥有25+常用移动端组件（如btn, card, media, nav, dialog, toast等），同时允许用户非常方便扩展及定制属于自己的组件。但是sheral决不只限于UI库......</p>
-									</div>
-									<div class="font-foot text-right">
-										<a class="btn btn-primary btn-xs" href="../web/knowledge/notesDetail.html">阅读全文</a>
-									</div>
-								</div>
-							</div>
-							</div>
+								</li>
+							</ul>
 							<div>
 								<!--前端分页位置-->
 							</div>
@@ -171,16 +102,8 @@
 		    							<h4 class="panel-title">推荐笔记</h4>
 									</div>
 									<div class="panel-body font-knowledge-panel-body">
-										<ul class="knowledge-class">
-											<li><a href="">jquery禁用a标签,jquery禁用按钮click点</a></li>
-											<li><a href="">jquery禁用a标签,jquery禁用按钮click点</a></li>
-											<li><a href="">jquery禁用a标签,jquery禁用按钮click点</a></li>
-											<li><a href="">jquery禁用a标签,jquery禁用按钮click点</a></li>
-											<li><a href="">jquery禁用a标签,jquery禁用按钮click点</a></li>
-											<li><a href="">jquery禁用a标签,jquery禁用按钮click点</a></li>
-											<li><a href="">jquery禁用a标签,jquery禁用按钮click点</a></li>
-											<li><a href="">jquery禁用a标签,jquery禁用按钮click点</a></li>
-											<li><a href="">jquery禁用a标签,jquery禁用按钮click点</a></li>
+										<ul class="knowledge-class"  data-ng-controller="knowledgeList">
+											<li data-ng-repeat="kl in knowledgeLists" data-ng-show="{{kl.push}}"><a data-ng-href="{{kl.link}}" data-ng-bind="kl.title" title="{{kl.title}}"></a></li>
 										</ul>
 									</div>
 								</div>
@@ -190,16 +113,8 @@
 		    							<h4 class="panel-title">书籍推荐</h4>
 									</div>
 									<div class="panel-body font-knowledge-panel-body">
-										<ul class="knowledge-class">
-											<li><a href="">《Javascript 高级程序设计》</a></li>
-											<li><a href="">《锋利的Jquery》</a></li>
-											<li><a href="">《Javascript 权威指南》</a></li>
-											<li><a href="">《Javascript 高级程序设计》</a></li>
-											<li><a href="">《锋利的Jquery》</a></li>
-											<li><a href="">《Javascript 权威指南》</a></li>
-											<li><a href="">《Javascript 高级程序设计》</a></li>
-											<li><a href="">《锋利的Jquery》</a></li>
-											<li><a href="">《Javascript 权威指南》</a></li>
+										<ul class="knowledge-class" data-ng-controller="booksList">
+											<li data-ng-repeat="bl in booksLists" ng-show="bl.push"><a data-ng-href="{{bl.link}}" title="{{bl.title}}" data-ng-bind="bl.title"></a></li>
 										</ul>
 									</div>
 								</div>
@@ -221,5 +136,6 @@
 			</address>
 		</footer>
 		<script type="text/javascript" src="../../js/index.js" ></script>
+		<script type="text/javascript" src="../../js/controller/note-controller.js" ></script>
 	</body>
 </html>

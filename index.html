@@ -70,11 +70,11 @@
 					</div>
 					<div class="container-fluid padd0">
 						<ul class="col-lg-9" data-ng-controller="knowledge">
-							<li class="font-box mt20" data-ng-repeat="k in knowledges">
+							<li class="font-box mt20" data-ng-repeat="k in knowledges | limitTo:8" ng-show="k.push">
 								<div class="font-img  pull-left"><img data-ng-src="img/{{k.imgUrl}}" /></div>
 								<div class="font-cont">
 									<div class="font-cont-head mt10">
-										<h4 class="font-cont-head-title" data-ng-bind="k.title"></h4>
+										<a data-ng-href="k.link" target="_blank"><h4 class="font-cont-head-title" data-ng-bind="k.title"></h4></a>
 										<div class="font-cont-auther">
 											<span>作者：<span data-ng-bind="k.author"></span></span>
 											<time>日期：<span data-ng-bind="k.time"></span></time>
@@ -97,7 +97,7 @@
 									</div>
 									<div class="panel-body font-knowledge-panel-body">
 										<ul class="knowledge-class" data-ng-controller="knowledgeList">
-											<li data-ng-repeat="kl in knowledgeLists" data-ng-show="{{kl.show}}"><a data-ng-href="{{kl.link}}" data-ng-bind="kl.title" title="{{kl.title}}"></a></li>
+											<li data-ng-repeat="kl in knowledgeLists" data-ng-show="{{kl.push}}"><a data-ng-href="{{kl.link}}" data-ng-bind="kl.title" title="{{kl.title}}"></a></li>
 										</ul>
 									</div>
 								</div>
@@ -108,7 +108,7 @@
 									</div>
 									<div class="panel-body font-knowledge-panel-body">
 										<ul class="knowledge-class" data-ng-controller="booksList">
-											<li data-ng-repeat="bl in booksLists"><a data-ng-href="{{bl.link}}" title="{{bl.title}}" data-ng-bind="bl.title"></a></li>
+											<li data-ng-repeat="bl in booksLists" ng-show="bl.push"><a data-ng-href="{{bl.link}}" title="{{bl.title}}" data-ng-bind="bl.title"></a></li>
 										</ul>
 									</div>
 								</div>
@@ -125,7 +125,7 @@
 					</div>
 				</div>
 				<ul class="col-lg-10 col-lg-offset-1" data-ng-controller="case">
-					<li class="col-lg-3" data-ng-repeat="c in cases">
+					<li class="col-lg-3" data-ng-repeat="c in cases" ng-show="c.push">
 						<div class="thumbnail font-case">
 								<a data-ng-href="{{c.link}}" target="_blank">
 									<img data-ng-src="img/casesImg/{{c.imgUrl}}" alt="{{c.alt}}">
@@ -146,7 +146,7 @@
 					</div>
 				</div>
 				<ul class="col-lg-10 col-lg-offset-1" data-ng-controller="book">
-					<li class="font-books-list" data-ng-repeat="b in books">
+					<li class="font-books-list" data-ng-repeat="b in books" ng-show="b.push">
 						<div class="thumbnail font-book">
 							<a data-ng-href="{{b.link}}" title="{{b.title}}"><img data-ng-src="img/boodsImg/{{b.imgUrl}}" alt="{{b.title}}"></a>
 							<div class="font-book-cont" >
@@ -169,7 +169,7 @@
 			</address>
 		</footer>
 		<script src="js/index.js"></script>
-		<script src="js/index-controller.js"></script>
+		<script src="js/controller/index-controller.js"></script>
 		<script> 
 			var mySwiper = new Swiper('.swiper-container', {
 				pagination : '.swiper-pagination',

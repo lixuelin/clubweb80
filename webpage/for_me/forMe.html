@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html data-ng-app="myweb">
 	<head>
 		<meta charset="UTF-8">
 		<title>clubweb80 - 我的简历</title>
@@ -9,6 +9,9 @@
 		<script src="../../js/jquery/jquery-1.11.0.js"></script>
 		<script type="text/javascript" src="../../js/jquery/jquery.cookie.js" ></script>
 		<script src="../../js/bootstrap/js/bootstrap.min.js"></script>
+		<!--angular start-->
+		<script src="../../js/angular/angular_1.4.6.min.js" ></script>
+		<!--angular end-->
 	</head>
 	<body>
 		<header>
@@ -99,26 +102,12 @@
 					</div>
 					<div class="container-fluid padd0">
 						<div class="col-lg-12">
-							<ul class="font-works-list">
-								<li class="col-lg-6 col-lg-offset-6 font-works-list-left">
+							<ul class="font-works-list" data-ng-controller="work">
+								<li class="col-lg-6" data-ng-class-odd="'col-lg-offset-6 font-works-list-left'" data-ng-class-even="'font-works-list-right'" data-ng-repeat="w in works">
 									<div class="font-works">
-										<time class="font-works-time">2014年8月-至今</time>
-										<h4 class="font-works-name">神州泰岳智能数据技术有限公司</h4>
-										<p class="font-works-cont">一日，我与上帝一同出行。 路过一条河时，我看到水里有一个人在挣扎，我指着那个人问：“上帝，为什么你不去救那个人，难道他没有向你祈祷吗？”上帝回答：“不，他向我祈祷了两次，但我也救了他两次——第一次我让一根圆木从他身边漂过，他没有去抓。第二次我让一个人划着竹筏从他身边经过，他又不肯去抓那个人向他伸出的手。你让我怎样去救他，难道非得我亲手去把他拉上来？”我哑口无言。 </p>
-									</div>
-								</li>
-								<li class="col-lg-6 font-works-list-right">
-									<div class="font-works">
-										<time class="font-works-time">2014年8月-至今</time>
-										<h4 class="font-works-name">神州泰岳智能数据技术有限公司</h4>
-										<p class="font-works-cont">一日，我与上帝一同出行。 路过一条河时，我看到水里有一个人在挣扎，我指着那个人问：“上帝，为什么你不去救那个人，难道他没有向你祈祷吗？”上帝回答：“不，他向我祈祷了两次，但我也救了他两次——第一次我让一根圆木从他身边漂过，他没有去抓。第二次我让一个人划着竹筏从他身边经过，他又不肯去抓那个人向他伸出的手。你让我怎样去救他，难道非得我亲手去把他拉上来？”我哑口无言。 </p>
-									</div>
-								</li>
-								<li class="col-lg-6 col-lg-offset-6 font-works-list-left">
-									<div class="font-works">
-										<time class="font-works-time">2014年8月-至今</time>
-										<h4 class="font-works-name">神州泰岳智能数据技术有限公司</h4>
-										<p class="font-works-cont">一日，我与上帝一同出行。 路过一条河时，我看到水里有一个人在挣扎，我指着那个人问：“上帝，为什么你不去救那个人，难道他没有向你祈祷吗？”上帝回答：“不，他向我祈祷了两次，但我也救了他两次——第一次我让一根圆木从他身边漂过，他没有去抓。第二次我让一个人划着竹筏从他身边经过，他又不肯去抓那个人向他伸出的手。你让我怎样去救他，难道非得我亲手去把他拉上来？”我哑口无言。 </p>
+										<time class="font-works-time" data-ng-bind="w.time"></time>
+										<h4 class="font-works-name" data-ng-bind="w.company"></h4>
+										<p class="font-works-cont" data-ng-bind="w.work"> </p>
 									</div>
 								</li>
 							</ul>
@@ -128,104 +117,63 @@
 						<hr class="column-hr" />
 						<span class="column-name">工作技能</span>
 					</div>
-					<div class="container-fluid padd0">
-						<div class="col-lg-2">
+					<ul class="container-fluid padd0" data-ng-controller="skill">
+						<li class="col-lg-2" data-ng-repeat="s in skills">
 							<div class="thumbnail font-case">
-								<img src="../../img/css.png" alt="css">
+								<img src="../../img/{{s.imgUrl}}" alt="css">
 								<div class="caption">
-									<h4>Thumbnail label</h4>
-									<p>...</p>
+									<h4 data-ng-bind="s.name"></h4>
+									<p data-ng-bind="s.how"></p>
 								</div>
 							</div>
-						</div>
-						<div class="col-lg-2">
-							<div class="thumbnail font-case">
-								<img src="../../img/css.png" alt="css">
-								<div class="caption">
-									<h4>Thumbnail label</h4>
-									<p>...</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-2">
-							<div class="thumbnail font-case">
-								<img src="../../img/css.png" alt="css">
-								<div class="caption">
-									<h4>Thumbnail label</h4>
-									<p>...</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-2">
-							<div class="thumbnail font-case">
-								<img src="../../img/css.png" alt="css">
-								<div class="caption">
-									<h4>Thumbnail label</h4>
-									<p>...</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-2">
-							<div class="thumbnail font-case">
-								<img src="../../img/css.png" alt="css">
-								<div class="caption">
-									<h4>Thumbnail label</h4>
-									<p>...</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-2">
-							<div class="thumbnail font-case">
-								<img src="../../img/css.png" alt="css">
-								<div class="caption">
-									<h4>Thumbnail label</h4>
-									<p>...</p>
-								</div>
-							</div>
-						</div>
-					</div>
+						</li>
+					</ul>
 					<div class="column">
 						<hr class="column-hr" />
 						<span class="column-name">成功案例</span>
 					</div>
-					<div class="container-fluid padd0">
-						<div class="col-lg-3">
+					<ul class="container-fluid padd0">
+						<li class="col-lg-3">
 							<div class="thumbnail font-case">
-								<img src="../../img/casesImg/c_01.jpg" alt="css">
-								<div class="caption">
-									<h4>Thumbnail label</h4>
-									<p>...</p>
-								</div>
+								<a href=""><img src="../../img/casesImg/c_01.jpg" alt="css">
+									<div class="font-case-cont">
+										<h4>Thumbnail label</h4>
+										<p>...</p>
+									</div>
+								</a>
 							</div>
-						</div>
-						<div class="col-lg-3">
+						</li>
+						<li class="col-lg-3">
 							<div class="thumbnail font-case">
-								<img src="../../img/casesImg/c_02.jpg" alt="css">
-								<div class="caption">
-									<h4>Thumbnail label</h4>
-									<p>...</p>
-								</div>
+								<a href=""><img src="../../img/casesImg/c_02.jpg" alt="css">
+									<div class="font-case-cont">
+										<h4>Thumbnail label</h4>
+										<p>...</p>
+									</div>
+								</a>
 							</div>
-						</div>
-						<div class="col-lg-3">
+						</li>
+						<li class="col-lg-3">
 							<div class="thumbnail font-case">
-								<img src="../../img/casesImg/c_03.jpg" alt="css">
-								<div class="caption">
-									<h4>Thumbnail label</h4>
-									<p>...</p>
-								</div>
+								<a href=""><img src="../../img/casesImg/c_03.jpg" alt="css">
+									<div class="font-case-cont">
+										<h4>Thumbnail label</h4>
+										<p>...</p>
+									</div>
+								</a>
 							</div>
-						</div>
-						<div class="col-lg-3">
+						</li>
+						<li class="col-lg-3">
 							<div class="thumbnail font-case">
-								<img src="../../img/casesImg/c_04.jpg" alt="css">
-								<div class="caption">
-									<h4>Thumbnail label</h4>
-									<p>...</p>
-								</div>
+								<a href=""><img src="../../img/casesImg/c_04.jpg" alt="css">
+									<div class="font-case-cont">
+										<h4>Thumbnail label</h4>
+										<p>...</p>
+									</div>
+								</a>
 							</div>
-						</div>
-					</div>
+						</li>
+					</ul>
 					<div class="column">
 						<hr class="column-hr" />
 						<span class="column-name">联系我</span>
@@ -259,5 +207,6 @@
 			</address>
 		</footer>
 		<script type="text/javascript" src="../../js/index.js" ></script>
+		<script type="text/javascript" src="../../js/controller/my-controller.js" ></script>
 	</body>
 </html>

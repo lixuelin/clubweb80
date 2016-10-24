@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html data-ng-app="myweb">
 	<head>
 		<meta charset="UTF-8">
 		<title>clubweb80 - 前端案例</title>
@@ -9,6 +9,9 @@
 		<script src="../../js/jquery/jquery-1.11.0.js"></script>
 		<script src="../../js/jquery/jquery.cookie.js"></script>
 		<script src="../../js/bootstrap/js/bootstrap.min.js"></script>
+		<!--angular start-->
+		<script src="../../js/angular/angular_1.4.6.min.js" ></script>
+		<!--angular end-->
 	</head>
 	<body>
 		<header>
@@ -49,194 +52,26 @@
 					</div>
 				</div>
 				<section class="container-fluid padd0">
-				<div class="col-lg-10 col-lg-offset-1">
-					<div class="column">
-						<hr class="column-hr" />
-						<span class="column-name">前端案例</span>
-					</div>
-				</div>
-				<div  class="col-lg-10 col-lg-offset-1">
-					<div class="col-lg-3">
-						<div class="thumbnail font-case">
-								<img src="../../img/casesImg/c_01.jpg" alt="案例">
-								<div class="caption">
-									<h4>Thumbnail label</h4>
-									<p>...</p>
-								</div>
+					<div class="col-lg-10 col-lg-offset-1">
+						<div class="column">
+							<hr class="column-hr" />
+							<span class="column-name">前端案例</span>
 						</div>
 					</div>
-					<div class="col-lg-3">
-						<div class="thumbnail font-case">
-								<img src="../../img/casesImg/c_02.jpg" alt="案例">
-								<div class="caption">
-									<h4>Thumbnail label</h4>
-									<p>...</p>
-								</div>
-						</div>
-					</div>
-					<div class="col-lg-3">
-						<div class="thumbnail font-case">
-								<img src="../../img/casesImg/c_03.jpg" alt="案例">
-								<div class="caption">
-									<h4>Thumbnail label</h4>
-									<p>...</p>
-								</div>
-						</div>
-					</div>
-					<div class="col-lg-3">
-						<div class="thumbnail font-case">
-								<img src="../../img/casesImg/c_04.jpg" alt="案例">
-								<div class="caption">
-									<h4>Thumbnail label</h4>
-									<p>...</p>
-								</div>
-						</div>
-					</div>
-					<div class="col-lg-3">
-						<div class="thumbnail font-case">
-								<img src="../../img/casesImg/c_01.jpg" alt="案例">
-								<div class="caption">
-									<h4>Thumbnail label</h4>
-									<p>...</p>
-								</div>
-						</div>
-					</div>
-					<div class="col-lg-3">
-						<div class="thumbnail font-case">
-								<img src="../../img/casesImg/c_02.jpg" alt="案例">
-								<div class="caption">
-									<h4>Thumbnail label</h4>
-									<p>...</p>
-								</div>
-						</div>
-					</div>
-					<div class="col-lg-3">
-						<div class="thumbnail font-case">
-								<img src="../../img/casesImg/c_03.jpg" alt="案例">
-								<div class="caption">
-									<h4>Thumbnail label</h4>
-									<p>...</p>
-								</div>
-						</div>
-					</div>
-					<div class="col-lg-3">
-						<div class="thumbnail font-case">
-								<img src="../../img/casesImg/c_04.jpg" alt="案例">
-								<div class="caption">
-									<h4>Thumbnail label</h4>
-									<p>...</p>
-								</div>
-						</div>
-					</div>
-					<div class="col-lg-3">
-						<div class="thumbnail font-case">
-								<img src="../../img/casesImg/c_01.jpg" alt="案例">
-								<div class="caption">
-									<h4>Thumbnail label</h4>
-									<p>...</p>
-								</div>
-						</div>
-					</div>
-					<div class="col-lg-3">
-						<div class="thumbnail font-case">
-								<img src="../../img/casesImg/c_02.jpg" alt="案例">
-								<div class="caption">
-									<h4>Thumbnail label</h4>
-									<p>...</p>
-								</div>
-						</div>
-					</div>
-					<div class="col-lg-3">
-						<div class="thumbnail font-case">
-								<img src="../../img/casesImg/c_03.jpg" alt="案例">
-								<div class="caption">
-									<h4>Thumbnail label</h4>
-									<p>...</p>
-								</div>
-						</div>
-					</div>
-					<div class="col-lg-3">
-						<div class="thumbnail font-case">
-								<img src="../../img/casesImg/c_04.jpg" alt="案例">
-								<div class="caption">
-									<h4>Thumbnail label</h4>
-									<p>...</p>
-								</div>
-						</div>
-					</div>
-					<div class="col-lg-3">
-						<div class="thumbnail font-case">
-								<img src="../../img/casesImg/c_01.jpg" alt="案例">
-								<div class="caption">
-									<h4>Thumbnail label</h4>
-									<p>...</p>
-								</div>
-						</div>
-					</div>
-					<div class="col-lg-3">
-						<div class="thumbnail font-case">
-								<img src="../../img/casesImg/c_02.jpg" alt="案例">
-								<div class="caption">
-									<h4>Thumbnail label</h4>
-									<p>...</p>
-								</div>
-						</div>
-					</div>
-					<div class="col-lg-3">
-						<div class="thumbnail font-case">
-								<img src="../../img/casesImg/c_03.jpg" alt="案例">
-								<div class="caption">
-									<h4>Thumbnail label</h4>
-									<p>...</p>
-								</div>
-						</div>
-					</div>
-					<div class="col-lg-3">
-						<div class="thumbnail font-case">
-								<img src="../../img/casesImg/c_04.jpg" alt="案例">
-								<div class="caption">
-									<h4>Thumbnail label</h4>
-									<p>...</p>
-								</div>
-						</div>
-					</div>
-					<div class="col-lg-3">
-						<div class="thumbnail font-case">
-								<img src="../../img/casesImg/c_01.jpg" alt="案例">
-								<div class="caption">
-									<h4>Thumbnail label</h4>
-									<p>...</p>
-								</div>
-						</div>
-					</div>
-					<div class="col-lg-3">
-						<div class="thumbnail font-case">
-								<img src="../../img/casesImg/c_02.jpg" alt="案例">
-								<div class="caption">
-									<h4>Thumbnail label</h4>
-									<p>...</p>
-								</div>
-						</div>
-					</div>
-					<div class="col-lg-3">
-						<div class="thumbnail font-case">
-								<img src="../../img/casesImg/c_03.jpg" alt="案例">
-								<div class="caption">
-									<h4>Thumbnail label</h4>
-									<p>...</p>
-								</div>
-						</div>
-					</div>
-					<div class="col-lg-3">
-						<div class="thumbnail font-case">
-								<img src="../../img/casesImg/c_04.jpg" alt="案例">
-								<div class="caption">
-									<h4>Thumbnail label</h4>
-									<p>...</p>
-								</div>
-						</div>
-					</div>
-			</section>
+					<ul class="col-lg-10 col-lg-offset-1" data-ng-controller="case">
+						<li class="col-lg-3" data-ng-repeat="c in cases">
+							<div class="thumbnail font-case">
+								<a datap-ng-href="{{c.link}}" target="_blank">
+									<img data-ng-src="../../img/casesImg/{{c.imgUrl}}" alt="{{c.alt}}">
+									<div class="font-case-cont">
+										<h4 data-ng-bind="c.title"></h4>
+										<p data-ng-bind="c.cont"></p>
+									</div>
+								</a>
+							</div>
+						</li>
+					</ul>
+				</section>
 			</article>
 		</div>
 		<footer class="font-footer">
@@ -250,5 +85,6 @@
 			</address>
 		</footer>
 		<script type="text/javascript" src="../../js/index.js" ></script>
+		<script src="../../js/controller/case-controller.js"></script>
 	</body>
 </html>

@@ -44,6 +44,7 @@
 }
 .font-works {
   position: relative;
+  margin-bottom: 25px;
   padding: 10px;
   background: #fff;
   border-radius: 5px;
