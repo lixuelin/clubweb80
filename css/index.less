@@ -159,26 +159,34 @@ ul{
             border-bottom-color: #ccc;
         }
         &-body{
-            padding-top: 5px;
+            padding:10px 0 15px 0;
         }
     }
 }
 
 .knowledge-class{
     margin: 0;
-    li{
+   
+    & li{
+        padding: 0 15px;
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
         line-height: 30px;
-        border-bottom: 1px dashed #900c0c;   
+        border-bottom: 1px dashed #900c0c;  
+        transition: all ease-out .7s;
+        cursor: pointer;
         
-        a{
-            color: #333;
-            &:hover{
+        &:hover{
+            background: #F1F1F1; 
+            & a{
                 color: #900c0c;
                 text-decoration: none;    
             }
+        }
+        
+        & a{
+            color: #333;
         } 
     }
 }
