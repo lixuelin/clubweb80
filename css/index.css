@@ -1,6 +1,6 @@
 @charset "utf-8";
 body {
-  background: url(../img/bg.gif) repeat;
+  background: #f2f2f2;
 }
 li {
   list-style: none;
@@ -23,14 +23,18 @@ ul {
 .font-logo:hover {
   border-radius: 10px;
 }
+.font-head .font-nav a {
+  padding: 8px 10px;
+}
 .font-nav {
-  padding: 2px 0;
+  padding: 4px 0;
 }
 .font-nav a {
+  margin: 0 10px;
   color: #fff;
 }
 .font-nav a:hover {
-  color: #900C0C;
+  color: #122B40;
 }
 /*----前端head  end----*/
 .main {
@@ -48,7 +52,7 @@ ul {
   margin: 35px 0;
 }
 .column-hr {
-  border-top: 1px  dashed #900c0c;
+  border-top: 1px solid #999;
 }
 .column-name {
   position: absolute;
@@ -57,35 +61,35 @@ ul {
   transform: translate(-50%, -50%);
   display: block;
   padding: 5px 35px;
-  border: 1px dashed #900c0c;
+  border: 1px solid #999;
   background: #fff;
-  border-radius: 4px;
+  border-radius: 3px;
 }
 /*----前端模块 end----*/
 /*----前端知识 start----*/
 .font-box {
   padding: 10px;
-  padding-left: 275px;
-  min-height: 190px;
+  padding-left: 225px;
+  min-height: 160px;
   background: #fff;
   border: 1px solid #fff;
-  border-radius: 4px;
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2), -1px -1px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1), -1px -1px 3px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
 }
 .font-img {
-  margin-left: -265px;
-  width: 250px;
-  height: 170px;
-  border: 1px solid #900c0c;
-  border-radius: 5px;
+  margin-left: -215px;
+  width: 200px;
+  height: 140px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
   overflow: hidden;
 }
 .font-img img {
   display: block;
   width: 100%;
   height: 100%;
-  border-radius: 5px;
+  border-radius: 3px;
   transition: all ease-in-out 0.7s;
   cursor: pointer;
 }
@@ -100,28 +104,32 @@ ul {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  color: #900c0c;
+  color: #122B40;
+}
+.font-cont-head-title:hover {
+  color: #337ab7;
 }
 .font-cont-auther {
   padding-bottom: 5px;
   font-size: 12px;
   color: #ccc;
-  border-bottom: 1px dashed #900c0c;
+  border-bottom: 1px dashed #999;
 }
 .font-cont-auther time {
   padding-left: 20px;
 }
 .font-cont-bewrite {
   margin-top: 5px;
+  color: #666;
 }
 .font-knowledge {
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2), -1px -1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1), -1px -1px 3px rgba(0, 0, 0, 0.1);
 }
 .font-knowledge-panel {
   border-color: #fff;
 }
 .font-knowledge-panel-head {
-  color: #286090;
+  color: #122B40;
   background-color: #fff;
   border-bottom-color: #ccc;
 }
@@ -137,7 +145,7 @@ ul {
   text-overflow: ellipsis;
   white-space: nowrap;
   line-height: 30px;
-  border-bottom: 1px dashed #900c0c;
+  border-bottom: 1px solid #d3d2d2;
   transition: all ease-out 0.7s;
   cursor: pointer;
 }
@@ -145,16 +153,17 @@ ul {
   background: #F1F1F1;
 }
 .knowledge-class li:hover a {
-  color: #900c0c;
+  color: #337ab7;
   text-decoration: none;
 }
 .knowledge-class li a {
-  color: #333;
+  color: #122B40;
 }
 .font-case {
   position: relative;
   height: 100%;
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2), -1px -1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1), -1px -1px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
   cursor: pointer;
 }
 .font-case a {
@@ -241,7 +250,7 @@ ul {
 }
 .font-book {
   padding: 0;
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2), -1px -1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1), -1px -1px 3px rgba(0, 0, 0, 0.1);
   cursor: pointer;
 }
 .font-book a {
@@ -282,14 +291,17 @@ ul {
   margin-right: 10px;
   padding: 3px 15px;
   background: #fff;
-  border: 1px dashed #BCE8F1;
+  border: 1px solid #BCE8F1;
   border-radius: 4px;
 }
 .notes-class li:not(:first-child):hover {
-  background: #1B6D85;
+  background: #337ab7;
 }
 .notes-class li:not(:first-child):hover a {
   color: #fff;
+}
+.notes-class li:not(:first-child):hover a:hover {
+  text-decoration: none;
 }
 .notes-class li:first-child {
   background: none;
